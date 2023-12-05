@@ -61,7 +61,8 @@ function Students({studentdata,setStudentdata}) {
                             <Button
                                 sx={{bgcolor:"#7cb342", color:"white", mr:0.5}}
                                 size="small"
-                                onClick={() => history.push(`/edit-student/${idx}`)}
+                                onClick={() => history.push(`/edit-student/${stud.id}`)}
+                                // onClick={() => history.push(`/edit-student/${idx}`)}     //Both works
                             >
                             <EditIcon />
                             </Button>
@@ -69,7 +70,7 @@ function Students({studentdata,setStudentdata}) {
                             <Button
                                 sx={{bgcolor:"#ff5252", color:"white", ml:0.5}}
                                 size="small"
-                                onClick={() => deleteStudent(idx)}
+                                onClick={() => deleteStudent(stud.id)}
                             >
                             <DeleteIcon />
                             </Button>
